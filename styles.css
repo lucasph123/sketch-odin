@@ -1,0 +1,25 @@
+
+.body
+{
+    display:flex;
+}
+
+
+.main-container
+{
+    display:flex;
+    width: auto;
+    height: auto;
+ 
+
+}
+
+
+.item-container
+{
+    margin:10px;
+    width: 6.25%;
+    height: 30px;
+    border: solid black;
+
+}
