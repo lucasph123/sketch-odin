@@ -29,7 +29,8 @@
                     let itemContainer = document.createElement('div');
                     itemContainer.classList.add('item-container');
                     nextContainer.appendChild(itemContainer);
-                    itemContainer.addEventListener('mouseover', () => itemContainer.setAttribute('style','background:pink'));
+                    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+                    itemContainer.addEventListener('mousemove', () => itemContainer.setAttribute('style','background:#'+randomColor));
                     }
 
             }
