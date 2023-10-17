@@ -1,30 +1,40 @@
-        const firstContainer = document.querySelector('.main-container');
-        
+        const firstContainer = document.querySelector('.body-container')
+        const body = document.querySelector('body');
+        const btn = document.querySelector('.select-btn');
 
-    for(let i = 1; i< 257 ; i++)
-    {
-        if(i<17)
-        {
-            const itemContainer = document.createElement('div');
-            itemContainer.classList.add('item-container');
-            firstContainer.appendChild(itemContainer);
-        }
-        else if(i%16 == 0)
-        {
-            const nextContainer = document.createElement('div');
-            nextContainer.classList.add('main-container');
-            const body = document.querySelector('body');
-            body.appendChild(nextContainer);
-            for(let x=0; x<16;x++)
+    btn.addEventListener('click', function grid(){
+
+        let num = prompt('Inform a number for the grid');
+        if(num>100)
             {
-                const itemContainer = document.createElement('div');
-            itemContainer.classList.add('item-container');
-            nextContainer.appendChild(itemContainer);
+        
+            return alert('Inform a 100 < number');
             }
-
-        }
+        firstContainer.innerText ='';
         
 
+        for(let i = 0; i < num*num ; i++)
+        {
         
+            if(i % num == 0)
+            {
+                let nextContainer = document.createElement('div');
+                nextContainer.classList.add('main-container');
+                let tam = (100/num);
+                nextContainer.setAttribute('style','height:'+tam+'%');
+            
+                firstContainer.appendChild(nextContainer);
+                for(let x=0; x<num;x++)
+                    {
+                    let itemContainer = document.createElement('div');
+                    itemContainer.classList.add('item-container');
+                    nextContainer.appendChild(itemContainer);
+                    itemContainer.addEventListener('mouseover', () => itemContainer.setAttribute('style','background:pink'));
+                    }
 
-    } 
+            }
+        
+        } 
+    })
+
+      

@@ -1,25 +1,47 @@
 
-.body
+html,
+body
 {
-    display:flex;
+height: 100%;
+}
+
+.body-container
+{
+    height:91%;
+    display: block;
 }
 
 
 .main-container
 {
     display:flex;
-    width: auto;
-    height: auto;
- 
+    justify-content:center;
 
 }
-
 
 .item-container
 {
-    margin:10px;
-    width: 6.25%;
-    height: 30px;
-    border: solid black;
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    border: solid 0.1px black;
 
 }
+
+
+
+.btn-div{
+    position: relative;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.select-btn{
+    position:absolute;
+    font-size: 50px;
+    margin-bottom: 20px;
+    
+}
+
